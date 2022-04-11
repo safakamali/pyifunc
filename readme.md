@@ -30,6 +30,10 @@ api_component = {
 }
 ```
 
+And end of all:
+
+pyifunc.write_file('execute.txt', pyifunc.execute(uicode, api_components))
+
 Now you can use the SayHello tag in the xml file and do the processing with Python.
 ```xml
 <Sayhello name="Mohammad safa" lastname="kamali" />
