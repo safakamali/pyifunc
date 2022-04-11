@@ -1,0 +1,4 @@
+<body>
+<Text string="Say Hello App" />
+<Sayhello name="Mohammad safa" lastname="kamali" />
+</body>
