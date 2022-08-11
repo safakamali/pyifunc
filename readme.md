@@ -15,8 +15,7 @@ uicode = pyifunc.read_file('ui.xml')
 ```
 
 Now is the time to create desired functions, You can do nothing but return a value. Like changing a database
-If you want your component to accept prop, you must set **one** input for your function.
-You can use this input to access given props.
+You can use this function prams to access given props.
 ```python
 def say_hello(name, lastname):
     return f"Hello {name} {lastname}"
