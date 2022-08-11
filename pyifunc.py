@@ -31,6 +31,7 @@ def execute(uicode: str, component_api):
 
     for component in json_uicode:
         a = "" # sorry ! (;
+        b = "" # sorry ! (;
         thiscomponent_xml = ""
         component_props = json_uicode[component]
 
@@ -39,12 +40,13 @@ def execute(uicode: str, component_api):
             # print(prop)
             prop2 = prop.replace('@', '')
             a += f'{prop2}="{component_props[prop]}" '
+            b += f'{prop2}="{component_props[prop]}", '
         
         thiscomponent_xml = f'<{component} {a}/>'
         json.dumps(component_props)
 
 
-        component_result = eval(f"component_api[component]({a})")
+        component_result = eval(f"component_api[component]({b})")
 
         result = result.replace(thiscomponent_xml, component_result)
 

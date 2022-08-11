@@ -8,12 +8,12 @@ uicode = pyifunc.read_file('ui.xml')
 
 # Create functions to connect to xml
 # return given data in prop string
-def ShowText(data):
-    return data["@string"]
+def ShowText(string):
+    return string
 
 # return a text for hello to user
-def SayHello(data):
-    return f"Hello {data['@name']} {data['@lastname']}"
+def SayHello(name, lastname):
+    return f"Hello {name} {lastname}"
 
 # ../ Important \..
 # make a interface for connect the component to functions
