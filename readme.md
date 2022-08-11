@@ -18,8 +18,8 @@ Now is the time to create desired functions, You can do nothing but return a val
 If you want your component to accept prop, you must set **one** input for your function.
 You can use this input to access given props.
 ```python
-def say_hello(data):
-    return f"Hello {data['@name']} {data['@lastname']}"
+def say_hello(name, lastname):
+    return f"Hello {name} {lastname}"
 ```
 
 Next you need to create a interface for connect components to functions
