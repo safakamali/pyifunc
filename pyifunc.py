@@ -43,9 +43,14 @@ def execute(uicode: str, component_api):
         thiscomponent_xml = f'<{component} {a}/>'
         json.dumps(component_props)
 
+
+        component_result = eval(f"component_api[component]({a})")
+
+        result = result.replace(thiscomponent_xml, component_result)
+
         # print(thiscomponent_xml)
         # print(component_api[component](component_props))
-        result = result.replace(thiscomponent_xml, str(component_api[component](component_props)))
+        # result = result.replace(thiscomponent_xml, str(component_api[component](component_props)))
     
 
     return str(result).replace('\n', "", 1)
